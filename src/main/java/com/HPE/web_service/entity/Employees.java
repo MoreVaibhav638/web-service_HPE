@@ -3,21 +3,20 @@ package com.HPE.web_service.entity;
 import java.util.List;
 
 public class Employees {
+	  private List<Employee> employeeList;
 
-    private List<Employee> employees;
+	    public Employees() {
+	    }
 
-    public Employees() {
-    }
+	    public Employees(List<Employee> employeeList) {
+	        this.employeeList = employeeList;
+	    }
 
-    public Employees(List<Employee> employees) {
-        this.employees = employees;
-    }
+	    public List<Employee> getEmployeeList() {
+	        return employeeList;
+	    }
 
-    public List<Employee> getEmployees() {
-        return employees;
-    }
-
-    public void setEmployees(List<Employee> employees) {
-        this.employees = employees;
-    }
-}
+	    public void setEmployeeList(List<Employee> employeeList) {
+	        this.employeeList = employeeList;
+	    }
+	}

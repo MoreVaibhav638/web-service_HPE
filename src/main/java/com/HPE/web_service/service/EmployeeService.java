@@ -10,11 +10,11 @@ import com.HPE.web_service.entity.Employees;
 
 @Service
 public class EmployeeService {
-	 public Employees getAllEmployees() {
+	
+	    private List<Employee> employeeList = new ArrayList<>();
 
-	        List<Employee> employeeList = new ArrayList<>();
-
-	        employeeList.add(new Employee(
+	     public EmployeeService(){
+	    	 employeeList.add(new Employee(
 	                "EMP001",
 	                "John",
 	                "Doe",
@@ -34,7 +34,21 @@ public class EmployeeService {
 	                "Johnson",
 	                "david.johnson@example.com",
 	                "Project Manager"));
-
-	        return new Employees(employeeList);
 	    }
-	}
+	     public Employees getAllEmployees() {
+	         Employees employees = new Employees();
+	         employees.setEmployeeList(employeeList);
+	         return employees;
+}
+	     public Employee addEmployee(Employee employee) {
+			 employeeList.add(employee);
+			 return employee;
+	     }	 
+	  public Employee getAllEmployees(Employee employee) {
+		  employeeList.addAll(employeeList);
+		  return employee;
+	  }
+	  
+	 
+}
+	
