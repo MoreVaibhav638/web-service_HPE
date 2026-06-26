@@ -13,7 +13,7 @@
 	</parent>
 	
 	<groupId>com.HPE</groupId>
-	<artifactId>web_services_HPE</artifactId>
+	<artifactId>web_services</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	
 	<name>web_service</name>
@@ -28,6 +28,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>
